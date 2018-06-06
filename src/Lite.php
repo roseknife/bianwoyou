@@ -1,6 +1,7 @@
 <?php
 
 namespace RoseKnife\Bianwoyou;
+date_default_timezone_set('Asia/Shanghai');
 
 /**
  * Created by PhpStorm.
@@ -114,10 +115,10 @@ class Lite
     /**
      * @return 生成13位时间
      */
-    private function getMillisecond()
+    public function getMillisecond()
     {
         list($t1, $t2) = explode(' ', microtime());
-        return (float)sprintf('%.0f', (floatval($t1) + floatval($t2)) * 1000);
+        return ''.sprintf('%.0f', (floatval($t1) + floatval($t2)) * 1000);
     }
 
     /**
