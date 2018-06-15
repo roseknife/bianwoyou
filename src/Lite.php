@@ -45,7 +45,7 @@ class Lite
      */
     public function postOrder($object)
     {
-        $objData = array_filter((array)$object); //转数组移除空值
+        $objData = (array)$object; //转数组移除空值
         $data = $this->createSign($objData);
         return $this->postData($this->APIURL . "ordercreate", $data);
     }
