@@ -14,12 +14,12 @@ class Orderobj
     /**
      * @var第三方产品名称
      */
-    public $thirdProdName;
+    public $thirdProdName="";
 
     /**
      * @var联系人电话
      */
-    public $linkManPhone;
+    public $linkManPhone="";
 
     /**
      * @var门票类型
@@ -34,7 +34,7 @@ class Orderobj
     /**
      * @var联系人身份证
      */
-    public $linkManCardNo;
+    public $linkManCardNo="";
 
     /**
      * @var订单金额
@@ -49,12 +49,12 @@ class Orderobj
     /**
      * @var是否发短信
      */
-    public $needSms;
+    public $needSms=0;
 
     /**
      * @var联系人姓名
      */
-    public $linkManName;
+    public $linkManName="";
 
     /**
      * @var第三方订单号
