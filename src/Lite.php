@@ -50,6 +50,17 @@ class Lite
         return $this->postData($this->APIURL . "ordercreate", $data);
     }
 
+
+    /** 好行查询接口(根据我方订单号查询)
+     * @param string $tid 我方订单号
+     * @return object mixed
+     */
+    public function statusthirdsn($tid){
+        $data = $this->createSign(array("thirdId" => $tid));
+        return $this->postData($this->APIURL . "orderstatusthirdsn", $data);
+
+    }
+
     /**
      * 查询苏州好行门票产品信息
      * 返回值说明
@@ -142,4 +153,7 @@ class Lite
         curl_close($ch);
         return $handles;
     }
+
+
+
 }
